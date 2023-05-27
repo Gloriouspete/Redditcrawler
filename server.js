@@ -41,7 +41,7 @@ app.get('/reddit', async (req, res) => {
   
   for (let i = 0; i < sliced.length; i++) {
     const item = sliced[i];
-    const { title, subreddit,content ,comments, upvotes } = item;
+    const { title, subreddit,content ,comments, upvotes,url } = item;
   
     const replacedItem = `
       <div class="class1">
