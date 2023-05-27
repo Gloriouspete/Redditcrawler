@@ -49,6 +49,8 @@ app.get('/reddit', async (req, res) => {
         <p class="ptitle">${title}</p>
         <h3>Subreddit</h3>
         <p class="pnumber"> ${subreddit}</p>
+         <h3>Link Url</h3>
+        <p>Link: <a href="${url}" target="_blank">${url}</a></p>
         <h3>Main Content</h3>
         <p class="body">${content}</p>
         <h3>Number of Comments</h3>
