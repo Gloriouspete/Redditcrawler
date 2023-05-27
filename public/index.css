@@ -1,0 +1,196 @@
+body{
+    font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  color: #333;
+  margin: 0 0;
+
+}
+header{
+    background-color: rgb(234, 56, 89);
+    position: fixed;
+    width: 100vw;
+    height:50px;
+    display: flex;
+    top:0;
+    justify-content: center;
+    align-items: center;
+    color: rgb(238, 238, 86);
+    margin:0 auto 10%;
+    box-shadow: 2px 2px 2px grey;
+    text-shadow: 2px 2px 2px red;
+}
+.main{
+    margin:20% auto 0;
+}
+.retrieve{
+    width:60vw;
+    height:auto;
+    font-size: 190%;
+    text-align: center;
+    line-height: 40px;
+    margin:50px auto 0;
+    text-shadow: 1px 1px 1px black;
+
+}
+.retrieve::after{
+    content:'Reddit';
+    color:orange;
+    text-shadow: 1px 1px 1px red;
+}
+.phrase{
+    text-align: center;
+    font-size: 120%;
+    font-weight: 700;
+}
+.search-house{
+    width:100vw;
+    height:70px;
+    display: flex;
+    justify-content: center;
+}
+.search-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    border: 1px solid black;
+    width:70vw;
+    box-shadow: 2px 2px 2px 2px grey ;
+    border-radius: 20px;
+    height: 50px;
+
+  }
+  svg{
+    width:30px;
+    height:30px;
+    fill: rgb(140, 30, 230) !important;
+  }
+  #searchInput:focus {
+    outline: none;
+  }
+  #searchInput {
+    height: 40px;
+    width: 40vw;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  #searchButton {
+    height: 40px;
+    width: 15vw;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #searchButton i {
+    margin: 0 auto;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+
+    body{
+        font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+      margin: 0 0;
+    
+    }
+    header{
+        background-color: rgb(234, 56, 89);
+        position: fixed;
+        width: 100vw;
+        height:50px;
+        display: flex;
+        top:0;
+        justify-content: center;
+        align-items: center;
+        color: rgb(238, 238, 86);
+        margin:0 auto 50%;
+        box-shadow: 2px 2px 2px grey;
+        text-shadow: 2px 2px 2px red;
+    }
+    .main{
+        margin:50% auto 0;
+    }
+    .retrieve{
+        width:60vw;
+        height:auto;
+        font-size: 190%;
+        text-align: center;
+        line-height: 40px;
+        margin:50px auto 0;
+        text-shadow: 1px 1px 1px black;
+    
+    }
+    .retrieve::after{
+        content:'Reddit';
+        color:orange;
+        text-shadow: 1px 1px 1px red;
+    }
+    .phrase{
+        text-align: center;
+        font-size: 120%;
+        font-weight: 700;
+    }
+    .search-house{
+        width:100vw;
+        height:70px;
+        display: flex;
+        justify-content: center;
+    }
+    .search-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 10px;
+        border: 1px solid black;
+        width:70vw;
+        box-shadow: 2px 2px 2px 2px grey ;
+        border-radius: 20px;
+        height: 50px;
+    
+      }
+      svg{
+        width:30px;
+        height:30px;
+        fill: rgb(140, 30, 230) !important;
+      }
+      #searchInput:focus {
+        outline: none;
+      }
+      #searchInput {
+        height: 40px;
+        width: 40vw;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: transparent;
+      }
+      
+      #searchButton {
+        height: 40px;
+        width: 15vw;
+        background-color: transparent;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      #searchButton i {
+        margin: 0 auto;
+      }
+      
+      /* Media queries for responsiveness */
+      @media (max-width: 768px) {
+    
+      }
+      
+  }
+  

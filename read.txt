@@ -1,0 +1,45 @@
+const express = require('express');
+const snoowrap = require('snoowrap');
+const moment = require('moment');
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+const reddit = new snoowrap({
+  userAgent: 'apiurl/1.0.0 (by /Oluwaninyo)',
+  clientId: '_37yihp8oYI5XFfWJLa09Q',
+  clientSecret: 'R0u8Vmc6pvoqChG-JoQzY6wRFTQiGQ',
+  username: 'Oluwaninyo',
+  password: '12858588Peter'
+});
+
+app.get('/reddit/:subreddit/:timeRange', async (req, res) => {
+  const { subreddit, timeRange } = req.params;
+  try {
+    const posts = await getTopPosts(subreddit, timeRange);
+    res.json(posts);
+  } catch (error) {
+    console.error('Error getting the posts:', error);
+    res.status(500).json({ error: 'An error occurred' });
+  }
+});
+
+async function getTopPosts(subreddit, timeRange) {
+  try {
+    const posts = await reddit.getTop(subreddit, { time: timeRange, limit: 5 });
+    return posts.map(post => ({
+      title: post.title,
+      author: post.author.name,
+      created: moment.unix(post.created_utc).format('YYYY-MM-DD HH:mm:ss'),
+      score: post.score,
+      comments: post.num_comments
+    }));
+  } catch (error) {
+    console.error('Error retrieving top posts:', error);
+    throw error;
+  }
+}
+
+app.listen(port, () => {
+  console.log(`My server is running on port ${port}`);
+});
