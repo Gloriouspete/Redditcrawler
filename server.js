@@ -24,7 +24,7 @@ app.get('/redir',(req,res)=>{
 })
 app.get('/search', (req, res) => {
     const { query } = req.query;
-    const redirectUrl = `http://localhost:3000/reddit?query=${encodeURIComponent(query)}`;
+    const redirectUrl = `https://redditcrawler/reddit?query=${encodeURIComponent(query)}`;
     res.redirect(redirectUrl);
   });
   
